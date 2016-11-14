@@ -110,14 +110,14 @@ console.log("hooray! lengthyOperation is done."); //no result until lengthyOpera
 
 //decorate it:
 Dcor.decorate("lengthyOperation", [{
-    type: "asynch",
+    type: "async",
     callback: function (fname, fargs, res, f, ns) {
-        console.log("Asynch> function " + fname + " called with: ", fargs, " and returned: ", res);
+        console.log("Async> function " + fname + " called with: ", fargs, " and returned: ", res);
     }
 }]);
 
 //expect: 
-lengthyOperation(30000); //asynch. shouldn't block the UI
+lengthyOperation(30000); //async. shouldn't block the UI
 console.log("hooray! lengthyOperation is done."); //we should see this immediately
 
 //************************************************************
