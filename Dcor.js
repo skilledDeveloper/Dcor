@@ -18,7 +18,7 @@
 		performanceLogged: Measures the runtime duration of the function
 		singleton: Makes the function singleton. All future instances will be the same.
 		safeConstructor: Protects constructor functions against NOT using 'new'. A call will be considered as an instantiation. 
-		asynch: Makes synchronous functions asynchronous to prevent UI blocking
+		async: Makes synchronous functions asynchronous to prevent UI blocking
 		
 ***********************************************************/
 
@@ -139,9 +139,9 @@
                 else //instanciated with 'new' keyword
                 return fn.apply(this, arguments);
             };
-        } else if (decor.type === "asynch") {
+        } else if (decor.type === "async") {
             return function () {
-                //asynch
+                //async
                 var that = this,
                     args = arguments;
                 setTimeout(function () {
@@ -195,9 +195,9 @@
         }], namespaces);
     };
 
-    Dcor.asynch = function (fnNamePattern, decorCallback, namespaces) {
+    Dcor.async = function (fnNamePattern, decorCallback, namespaces) {
         return Dcor.decorate(fnNamePattern, [{
-            type: "asynch",
+            type: "async",
             callback: decorCallback
         }], namespaces);
     };
