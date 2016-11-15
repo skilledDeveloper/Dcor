@@ -17,7 +17,7 @@
 		cached: Stores the function return value to cache (memory) and use it for later calls
 		performanceLogged: Measures the runtime duration of the function
 		singleton: Makes the function singleton. All future instances will be the same.
-		safeConstructor: Protects constructor functions against NOT using 'new'. A call will be considered as an instantiation. 
+		safeConstructor: Protects constructor functions against NOT using `new`. Any call will be considered as an instantiation. 
 		async: Makes synchronous functions asynchronous to prevent UI blocking
 		
 ***********************************************************/
