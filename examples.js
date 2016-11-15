@@ -1,5 +1,5 @@
 /**********************************************************
-	Dcor-test.js - Some use cases and tests for Dcor
+	examples.js - Some use cases and tests for Dcor
 	
 	Alan Zawari 
 	May 2014
@@ -8,6 +8,8 @@
 		First define all sample functions (Block #1)
 		and then try different test cases one by one (Block #2)
 ***********************************************************/
+
+//first include Dcor.js
 
 //------------------------------------------------------------
 //Block #1. Define some sample functions...
