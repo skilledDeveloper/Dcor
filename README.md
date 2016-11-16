@@ -19,7 +19,7 @@ While the library has been tested in browser, it's not tested on Node.js yet.
   
 ### Usage:
 
-Make a function loggable:
+- Make a function loggable:
 ```
 //define a function
 function foo {}
@@ -33,7 +33,7 @@ Dcor.logged("foo", function (fname, fargs, res) {
 foo(); //args and result value should be logged from now on 
 ```
 
-Make a synchronous funtion asynchronous:
+- Make a synchronous funtion asynchronous:
 ```
 //define a function
 function lengthyOperation() {
