@@ -37,7 +37,7 @@ foo(); //args and result value should be logged from now on
 ```
 //define a function
 function lengthyOperation() {
-    //a long running task
+    //a long running synchrounous task...
 }; 
 
 //decorate it
