@@ -19,8 +19,9 @@ While the library has been tested in browser, it's not tested on Node.js yet.
   
 ### Usage:
 
+Make a function loggable:
 ```
-//define function
+//define a function
 function foo {}
 
 //decorate it
@@ -30,6 +31,25 @@ Dcor.logged("foo", function (fname, fargs, res) {
 
 //run it
 foo(); //args and result value should be logged from now on 
+```
+
+Make a synchronous funtion asynchronous:
+```
+//define a function
+function lengthyOperation() {
+    //a long running task
+}; 
+
+//decorate it
+Dcor.decorate("lengthyOperation", [{  //or simply user Dcor.async
+    type: "async",
+    callback: function (fname, fargs, res, f, ns) {
+        console.log("Async> function " + fname + " called with: ", fargs, " and returned: ", res);
+    }
+}]);
+
+//run it 
+lengthyOperation(); //it now runs asynchronously and will not block the UI
 ```
 
 See more [examples](https://github.com/skilledDeveloper/Dcor/blob/master/examples.js)
