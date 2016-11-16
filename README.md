@@ -20,7 +20,7 @@ While the library has been tested in browser, it's not tested on Node.js yet.
 ### Usage:
 
 - Make a function loggable:
-```
+```javascript
 //define a function
 function foo {}
 
@@ -34,7 +34,7 @@ foo(); //args and result value should be logged from now on
 ```
 
 - Make a synchronous funtion asynchronous:
-```
+```javascript
 //define a function
 function lengthyOperation() {
     //a long running synchrounous task...
