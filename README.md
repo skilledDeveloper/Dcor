@@ -17,7 +17,7 @@ While the library has been tested in browser, it's not tested on Node.js yet.
   - `safeConstructor`: Protects constructor functions against NOT using `new`. Any call will be considered as an instantiation. 
   - `async`: Makes synchronous functions asynchronous to prevent UI blocking
   
-### Usage:
+### Examples:
 
 - Make a function loggable:
 ```javascript
@@ -32,7 +32,17 @@ Dcor.logged("foo", function (fname, fargs, res) {
 //run it
 foo(); //args and result value should be logged from now on 
 ```
+#### Spy on all functions!
+`logged` can be used to log **all functions** in the browser for any website. To do that:
+ - Copy/paste contents of [Dcor.js](https://raw.githubusercontent.com/skilledDeveloper/Dcor/master/Dcor.js) in the browser console
+ - Decorate all functions like this:
+ ```javascript
+ Dcor.logged(".", function (fname, fargs, res) {
+    console.log("Dcor Log> " + fname + " called with: ", fargs, " and returned: ", res);
+ });
+ ```
 
+### Other Examples:
 - Make a synchronous funtion asynchronous:
 ```javascript
 //define a function
