@@ -5,7 +5,7 @@
 	logging, authorization, caching, etc. 
 	It is heavily based on closures and functional aspects of JavaScript.
 
-	Alan Zawari 
+	Alan Zavari 
 	May 2014
 	
 	Note: While the library has been tested in browser, 
